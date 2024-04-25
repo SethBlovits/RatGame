@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.ProBuilder.Shapes;
+using TMPro;
 
 public class connectedDoors : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class connectedDoors : MonoBehaviour
     public bool doorStatus;
     public GameObject player;
     public GameObject door_two;
+    public TMP_Text interact;
    
    
 
@@ -23,12 +25,14 @@ public class connectedDoors : MonoBehaviour
         if(other.name == "rat (Clone)"){
             doorStatus = true;
             player = other.gameObject;
+            interact.enabled = true;
         }
     }
     private void OnTriggerExit(Collider other){
         if(other.name == "rat (Clone)"){
             doorStatus = false;
             player = null;
+            interact.enabled = false;
         }
     }
 }

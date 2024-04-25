@@ -20,7 +20,7 @@ public class cheeseCheck : NetworkBehaviour
     }
     void FixedUpdate(){
         collisionsManager();
-        if(cheeseCount == 0){
+        if(cheeseCount == 0 && IsHost){
             NetworkManager.SceneManager.LoadScene("End Screen",LoadSceneMode.Single);
         }
     }
@@ -28,7 +28,7 @@ public class cheeseCheck : NetworkBehaviour
         hitColliders = Physics.OverlapBox(transform.position+new Vector3(120,0,-75),new Vector3(250,50,250)/2,Quaternion.identity,9);
         cheeseCount=0;
         for(int i = 0;i<hitColliders.Length;i++){
-            Debug.Log(hitColliders.Length);
+            //Debug.Log(hitColliders.Length);
             if(hitColliders[i].gameObject.name.Contains("Cheese_02 1")){
                 cheeseCount++;
             }

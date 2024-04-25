@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
 using Unity.Netcode;
+using TMPro;
 
 public class CheesePickup : NetworkBehaviour
 {
@@ -15,6 +16,7 @@ public class CheesePickup : NetworkBehaviour
     Transform parent = null;
     public Collider cheeseCollider;
     public Rigidbody m_rigidbody;
+    public TMP_Text interact;
     void Update()
     {
         
@@ -69,9 +71,11 @@ public class CheesePickup : NetworkBehaviour
         if(other.name == "rat (Clone)"){
             withinRange = true;
             player = other.gameObject;
+            interact.enabled = true;
         }
     }
     void OnTriggerExit(Collider other){
+        interact.enabled = false;
         withinRange = false;
         player = null;
     }

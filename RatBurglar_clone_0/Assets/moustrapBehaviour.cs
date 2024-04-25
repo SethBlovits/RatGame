@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using TMPro;
 
 public class moustrapBehaviour : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class moustrapBehaviour : MonoBehaviour
     GameObject player = null;     
     bool playerStuck = false;
     float timeDuration = 0f;
+    public TMP_Text trappedText;
     // Update is called once per frame
     void Update()
     {
@@ -25,6 +27,11 @@ public class moustrapBehaviour : MonoBehaviour
             timeDuration = 0f;
         }
     }
+    IEnumerator Delay(){
+        trappedText.enabled = true;
+        yield return new WaitForSeconds(3f);
+        trappedText.enabled = false;
+    }
     void OnTriggerEnter(Collider other){
         if(other.name == "rat (Clone)"){
             player = other.gameObject; 
@@ -32,6 +39,7 @@ public class moustrapBehaviour : MonoBehaviour
             player.GetComponent<movement>().stuck = playerStuck;
             timeDuration = 3f;
             player.transform.position = transform.position;
+            StartCoroutine(Delay());
         }
         
         
