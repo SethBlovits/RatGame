@@ -9,14 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/main.unity
-    guid: 7f3ada5b084436a40aec349a56589106
+    path: Assets/Scenes/Menu.unity
+    guid: 28ec75534c2725545b5e01afc550800b
   - enabled: 1
     path: Assets/Scenes/Chat.unity
     guid: 97af18fe4fa085c4db09ef44f32db5cc
-  - enabled: 1
-    path: Assets/Scenes/Menu.unity
-    guid: 28ec75534c2725545b5e01afc550800b
   - enabled: 1
     path: Assets/Scenes/Lobby.unity
     guid: 64d40d9f82ba13a4eb50591c301959c7
@@ -26,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/End Screen.unity
     guid: ee0d99331b5959f4da61ff3145d3b131
+  - enabled: 1
+    path: Assets/Scenes/main.unity
+    guid: 7f3ada5b084436a40aec349a56589106
   m_configObjects: {}
