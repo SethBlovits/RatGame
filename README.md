@@ -13,4 +13,6 @@ Collision: playerDetection.cs,ventInteraction.cs,trashcanscript.cs,CheesePickup.
 Pickup Interactions: CheesePickup.cs
 Scene Switching: cheeseCheck.cs,LobbyManager.cs,buttonScript.cs
 
-Unfortunately I don't have any shared attributes like a health system, I also have the chat function we wrote in class but it's not implemented in the final build.
+Unfortunately, I don't have any shared attributes like a health system, I also have the chat function we wrote in class but it's not implemented in the final build.
+
+The game is won by moving all the cheese from the main room to the starting room if you would like to test the game.
