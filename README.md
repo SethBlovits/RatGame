@@ -12,7 +12,8 @@ SyncPlayer Animation: playerDetection.cs -- The character asset is the only thin
 Collision: playerDetection.cs,ventInteraction.cs,trashcanscript.cs,CheesePickup.cs,mousetrapBehaviour.cs
 Pickup Interactions: CheesePickup.cs
 Scene Switching: cheeseCheck.cs,LobbyManager.cs,buttonScript.cs
+Chat Dialogue: chatUI.cs (The chat works by pressing "t" to open the box. Pressing "Enter" will send the message and make the chat box go invisible)
 
-Unfortunately, I don't have any shared attributes like a health system, I also have the chat function we wrote in class but it's not implemented in the final build.
+Unfortunately, I don't have any shared attributes like a health system
 
 The game is won by moving all the cheese from the main room to the starting room if you would like to test the game.
